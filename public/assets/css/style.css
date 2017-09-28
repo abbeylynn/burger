@@ -1,0 +1,69 @@
+.page {
+  width:90%;
+  display:inline-block;
+  background:white;
+}
+
+body {
+    background-image:url("https://previews.123rf.com/images/jirkaejc/jirkaejc1202/jirkaejc120200040/12509804-the-white-and-red-checkered-background-Stock-Photo-tablecloth.jpg");
+  text-align:center;
+  font-family: 'Merriweather', serif;
+}
+
+.jumbotron-fluid {
+  align-content:center;
+}
+
+.add {
+  width:50%;
+  display:inline-block;
+  padding: 10px;
+  border: 5px solid red;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight:900;
+  font-size:50px;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-style:bold;
+}
+
+.label {
+  font-weight: bold;
+}
+
+button {
+  padding:7px;
+  border: 1px solid black;
+  background:#eeeeee;
+  margin:5px;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+.table {
+  width:50%;
+  display:inline-block;
+}
+
+.left {
+  float:left;
+  width:200px;
+  display:inline-block;
+}
+
+.right {
+  float:right;
+  width:200px;
+  display:inline-block;
+}
+
+img {
+  margin:20px;
+}

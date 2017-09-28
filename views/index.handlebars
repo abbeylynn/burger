@@ -1,0 +1,56 @@
+<div class="page">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1>Eat-Da-Burger!</h1>
+    </div>
+  </div>
+
+
+  <div class="add">
+    <h2>Add a Burger</h2>
+    <hr>
+    <form class="create-update-form" action="/" method="POST">
+      <div class="form-group">
+        <p> <label for="bu">Burger Name:</label></p>
+        <input type="text" id="ca" name="name">
+      </div>
+      <div class="form-group">
+        <p><label for="devou">Order It Now?</label></p>
+        <p><input type="radio" name="eaten" value="0" checked>Order!</p>
+      </div>
+      <p> <button type="submit">Add Burger</button></p>
+    </form>
+  </div>
+
+  <div class="table">
+    <div class="left">
+      <h2>Eaten!</h2>
+      {{#each burgers}}
+      {{#unless this.devoured}}
+      {{this.burger_name}}
+      <form action="/{{this.id}}?_method=PUT" method="POST">
+        <input type="hidden" name="devoured" value="true">
+        <button type="submit">Add to Menu!</button>
+      </form>
+      {{> burgers/delete-burger}}
+      {{/unless}}
+      {{/each}}
+  
+    </div>
+    <div class="right">
+      <h2>Burgers Not Eaten!</h2>
+      {{#each burgers}}
+      {{#if this.devoured}}
+      {{this.burger_name}}
+      <form action="/{{this.id}}?_method=PUT" method="POST">
+        <input type="hidden" name="devoured" value="false">
+        <button type="submit">Nom!</button>
+      </form>
+      {{> burgers/delete-burger}}
+      {{/if}}
+      {{/each}}
+    </div>
+  </div>
+
+<img src="https://i.kinja-img.com/gawker-media/image/upload/s--VgxR90Sk--/c_scale,fl_progressive,q_80,w_800/jcyh9h5vdo545h2nvwwu.jpg">
+</div>

@@ -16,8 +16,7 @@ if (process.env.JAWSDB_URL) {
 		password: "cookie",
 		database: "burgers_db"
 	});
-}
-}
+	}
 //});
 
 
